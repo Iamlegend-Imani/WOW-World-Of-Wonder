@@ -67,3 +67,58 @@ function closeModal(){ if(modal) modal.hidden = true; }
 if(closeWonder) closeWonder.addEventListener('click', closeModal);
 if(modal) modal.addEventListener('click',e=>{ if(e.target === modal) closeModal(); });
 document.addEventListener('keydown',e=>{ if(e.key === 'Escape' && modal && !modal.hidden) closeModal(); });
+
+const missions = Array.from(document.querySelectorAll('.mission'));
+const progressFill = document.getElementById('progressFill');
+const progressText = document.getElementById('progressText');
+
+function getDiscoveries(){
+  try {
+    return JSON.parse(localStorage.getItem('wowDiscoveries') || '[]');
+  } catch {
+    return [];
+  }
+}
+
+function saveDiscoveries(ids){
+  localStorage.setItem('wowDiscoveries', JSON.stringify(ids));
+}
+
+function updateProgress(){
+  const discovered = getDiscoveries();
+  missions.forEach(mission=>{
+    const id = mission.dataset.mission;
+    const isDone = discovered.includes(id);
+    mission.classList.toggle('discovered', isDone);
+    const button = mission.querySelector('.discover-btn');
+    if(button){
+      button.setAttribute('aria-pressed', String(isDone));
+      button.textContent = isDone ? 'Discovered ✓' : 'Mark discovered';
+    }
+  });
+  if(progressFill) progressFill.style.width = `${missions.length ? (discovered.length / missions.length) * 100 : 0}%`;
+  if(progressText) progressText.textContent = `${discovered.length} of ${missions.length} adventures discovered`;
+}
+
+missions.forEach(mission=>{
+  const toggle = mission.querySelector('.mission-toggle');
+  const discover = mission.querySelector('.discover-btn');
+  if(toggle){
+    toggle.addEventListener('click',()=>{
+      const open = mission.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.textContent = open ? 'Close adventure' : 'Open adventure';
+    });
+  }
+  if(discover){
+    discover.addEventListener('click',()=>{
+      const id = mission.dataset.mission;
+      const ids = getDiscoveries();
+      const next = ids.includes(id) ? ids.filter(x=>x!==id) : [...ids,id];
+      saveDiscoveries(next);
+      updateProgress();
+    });
+  }
+});
+
+updateProgress();
