@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WOW Journey — World of Wonder</title>
+  <meta name="description" content="An 8-adventure journey across the World of Wonder for Koko and Israel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">WOW</a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="journey.html">Journey</a>
+      <a href="worlds.html">Worlds</a>
+      <a href="guide.html">Guide</a>
+    </nav>
+    <div class="controls" aria-label="Display settings">
+      <div class="theme-switch" role="group" aria-label="Theme">
+        <button id="darkTheme" type="button" aria-pressed="true">Dark</button>
+        <button id="lightTheme" type="button" aria-pressed="false">Light</button>
+      </div>
+      <button id="animationToggle" class="control-btn" type="button" aria-pressed="true">Animations: On</button>
+    </div>
+  </header>
+
+  <main class="journey-shell">
+    <section class="journey-hero">
+      <p class="eyebrow">Your first WOW journey</p>
+      <h1>Follow the questions wherever they lead.</h1>
+      <p>There is no subject called “everything.” But in real life, everything touches something else. Each adventure takes you through several worlds at once.</p>
+      <div class="journey-progress" aria-label="Journey progress">
+        <div class="progress-track"><span id="progressFill"></span></div>
+        <p id="progressText">0 of 8 adventures discovered</p>
+      </div>
+    </section>
+
+    <section class="journey-map" aria-label="Eight connected adventures">
+      <article class="mission" data-mission="1">
+        <div class="mission-marker">01</div>
+        <div class="mission-body">
+          <p class="world-tags"><span>World of Me</span><span>Mind Lab</span><span>Living Earth</span></p>
+          <h2>What can you notice that you usually miss?</h2>
+          <p class="mission-intro">Slow down long enough to discover how much information is already arriving through your body and the world around you.</p>
+          <div class="mission-details">
+            <h3>Go explore</h3>
+            <p>Spend ten silent minutes outside or by a window. Notice five things you can see, four you can hear, three you can feel, two you can smell, and one thing you suddenly became curious about.</p>
+            <h3>Make something</h3>
+            <p>Create a tiny “map of noticing” — drawing, voice note, collage, or list. Circle the thing you would have missed if you had been rushing.</p>
+            <h3>Wonder</h3>
+            <p>Does paying attention change what the world feels like?</p>
+          </div>
+          <button class="mission-toggle" type="button" aria-expanded="false">Open adventure</button>
+          <button class="discover-btn" type="button" aria-pressed="false">Mark discovered</button>
+        </div>
+      </article>
+
+      <article class="mission" data-mission="2">
+        <div class="mission-marker">02</div>
+        <div class="mission-body">
+          <p class="world-tags"><span>World of Us</span><span>Mind Lab</span><span>Truth Quest</span></p>
+          <h2>Can two people experience the same thing differently?</h2>
+          <p class="mission-intro">Explore perspective without deciding that one person has to be wrong.</p>
+          <div class="mission-details">
+            <h3>Try it</h3>
+            <p>Choose one picture, short story, object, or event. Koko, Israel, and the parent each describe what they notice first and what they think is happening — without hearing the others first.</p>
+            <h3>Compare</h3>
+            <p>What was the same? What was different? What did somebody else notice that you completely missed?</p>
+            <h3>Wonder</h3>
+            <p>When does a different perspective add information, and when do we need evidence to decide what is true?</p>
+          </div>
+          <button class="mission-toggle" type="button" aria-expanded="false">Open adventure</button>
+          <button class="discover-btn" type="button" aria-pressed="false">Mark discovered</button>
+        </div>
+      </article>
+
+      <article class="mission" data-mission="3">
+        <div class="mission-marker">03</div>
+        <div class="mission-body">
+          <p class="world-tags"><span>Living Earth</span><span>Creation Station</span><span>Mind Lab</span></p>
+          <h2>What has nature already invented?</h2>
+          <p class="mission-intro">Nature has been solving problems for a very long time. Go looking for designs.</p>
+          <div class="mission-details">
+            <h3>Find three designs</h3>
+            <p>Look for something in nature that protects, carries, sticks, floats, cools, stores, hides, attracts, or moves efficiently.</p>
+            <h3>Invent</h3>
+            <p>Choose one and design a human object inspired by it. The goal is not to copy its appearance — copy the useful idea.</p>
+            <h3>Wonder</h3>
+            <p>What changes when humans see nature as a teacher instead of only as a resource?</p>
+          </div>
+          <button class="mission-toggle" type="button" aria-expanded="false">Open adventure</button>
+          <button class="discover-btn" type="button" aria-pressed="false">Mark discovered</button>
+        </div>
+      </article>
+
+      <article class="mission" data-mission="4">
+        <div class="mission-marker">04</div>
+        <div class="mission-body">
+          <p class="world-tags"><span>Truth Quest</span><span>Tech World</span><span>World of Me</span></p>
+          <h2>Who is trying to get your attention?</h2>
+          <p class="mission-intro">Discover that attention is valuable — and many systems are designed to capture it.</p>
+          <div class="mission-details">
+            <h3>Attention detective</h3>
+            <p>Find five things designed to make someone look, click, watch, buy, or keep scrolling. They can be signs, packaging, videos, apps, games, or advertisements.</p>
+            <h3>Ask</h3>
+            <p>What feeling is each one trying to create? Who benefits if it works? Did you choose to pay attention, or did it pull you?</p>
+            <h3>Create</h3>
+            <p>Design an invitation that earns attention without tricking anyone.</p>
+          </div>
+          <button class="mission-toggle" type="button" aria-expanded="false">Open adventure</button>
+          <button class="discover-btn" type="button" aria-pressed="false">Mark discovered</button>
+        </div>
+      </article>
+
+      <article class="mission" data-mission="5">
+        <div class="mission-marker">05</div>
+        <div class="mission-body">
+          <p class="world-tags"><span>Creation Station</span><span>World of Us</span><span>Make It Matter</span></p>
+          <h2>What small problem could you make better?</h2>
+          <p class="mission-intro">Start with a person, not a product.</p>
+          <div class="mission-details">
+            <h3>Notice a friction</h3>
+            <p>Ask someone at home: “What is one tiny thing that makes your day harder or more annoying?” Listen without immediately solving it.</p>
+            <h3>Prototype</h3>
+            <p>Build the fastest possible version of an improvement using paper, cardboard, blocks, drawing, or simple code.</p>
+            <h3>Test</h3>
+            <p>Give it back to the person. Ask what helped, what did not, and what they would change.</p>
+          </div>
+          <button class="mission-toggle" type="button" aria-expanded="false">Open adventure</button>
+          <button class="discover-btn" type="button" aria-pressed="false">Mark discovered</button>
+        </div>
+      </article>
+
+      <article class="mission" data-mission="6">
+        <div class="mission-marker">06</div>
+        <div class="mission-body">
+          <p class="world-tags"><span>Tech World</span><span>AI Adventure</span><span>Truth Quest</span></p>
+          <h2>When should a machine help — and when should a human decide?</h2>
+          <p class="mission-intro">Technology can be powerful without being the right decision-maker for every situation.</p>
+          <div class="mission-details">
+            <h3>Sort the decisions</h3>
+            <p>Make three columns: MACHINE CAN HELP, HUMAN SHOULD DECIDE, and WE NEED BOTH. Sort examples like choosing a song, diagnosing a broken toy, deciding who gets punished, translating a language, suggesting a route, or choosing a friend.</p>
+            <h3>Go deeper</h3>
+            <p>Ask what information a machine would need, what it might miss, and who is responsible if the result hurts someone.</p>
+            <h3>Continue</h3>
+            <p><a href="https://iamlegend-imani.github.io/AI-Adventure/">Enter AI Adventure</a> when you are ready to explore machine intelligence more deeply.</p>
+          </div>
+          <button class="mission-toggle" type="button" aria-expanded="false">Open adventure</button>
+          <button class="discover-btn" type="button" aria-pressed="false">Mark discovered</button>
+        </div>
+      </article>
+
+      <article class="mission" data-mission="7">
+        <div class="mission-marker">07</div>
+        <div class="mission-body">
+          <p class="world-tags"><span>The Unknown</span><span>Mind Lab</span><span>World of Us</span></p>
+          <h2>What do we do with questions that do not have answers yet?</h2>
+          <p class="mission-intro">Some questions are problems to solve. Others are places to live in for a while.</p>
+          <div class="mission-details">
+            <h3>Build a Question Constellation</h3>
+            <p>Everyone contributes three questions they genuinely do not know the answer to. No searching yet. Group questions that seem connected.</p>
+            <h3>Choose one</h3>
+            <p>Decide whether it is factual, philosophical, personal, scientific, imaginative, or something else entirely.</p>
+            <h3>Wonder</h3>
+            <p>Can not knowing be useful?</p>
+          </div>
+          <button class="mission-toggle" type="button" aria-expanded="false">Open adventure</button>
+          <button class="discover-btn" type="button" aria-pressed="false">Mark discovered</button>
+        </div>
+      </article>
+
+      <article class="mission final-mission" data-mission="8">
+        <div class="mission-marker">08</div>
+        <div class="mission-body">
+          <p class="world-tags"><span>ALL WORLDS</span></p>
+          <h2>What will you do with what you have noticed?</h2>
+          <p class="mission-intro">The final adventure is not a test. It is a contribution.</p>
+          <div class="mission-details">
+            <h3>Choose something you care about</h3>
+            <p>A person, animal, place, problem, idea, feeling, or question.</p>
+            <h3>Create a response</h3>
+            <p>Make something that helps, teaches, protects, invites, explains, improves, delights, or makes somebody wonder. Use any medium you want.</p>
+            <h3>Tell the story</h3>
+            <p>“I noticed… I wondered… I explored… I changed my mind about… I created… and now I want to…”</p>
+          </div>
+          <button class="mission-toggle" type="button" aria-expanded="false">Open adventure</button>
+          <button class="discover-btn" type="button" aria-pressed="false">Mark discovered</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="journey-closing">
+      <p class="eyebrow">There is no finish line for curiosity</p>
+      <h2>Every answer can become another doorway.</h2>
+      <p>Return to any world. Repeat an adventure differently. Follow a question that was not in the plan.</p>
+      <a class="button secondary" href="worlds.html">Explore all worlds</a>
+    </section>
+  </main>
+
+  <footer><p>Made for Koko &amp; Israel with love and intention.</p><small>WOW — World of Wonder</small></footer>
+  <script src="script.js?v=2"></script>
+</body>
+</html>
