@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WOW — The Worlds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">WOW</a>
+    <nav><a class="active" href="worlds.html">Worlds</a><a href="guide.html">Guide</a></nav>
+    <div class="controls"><div class="theme-switch" role="group" aria-label="Theme"><button id="darkTheme" type="button" aria-pressed="true">Dark</button><button id="lightTheme" type="button" aria-pressed="false">Light</button></div><button id="animationToggle" class="control-btn" type="button" aria-pressed="true">Animations: On</button></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-intro">
+      <p class="eyebrow">The worlds</p>
+      <h1>Where do you want to wonder today?</h1>
+      <p>Every world begins with a question. You can enter them in any order because the worlds connect to each other.</p>
+    </section>
+
+    <section class="world-list">
+      <article id="me" class="world-row"><span class="world-number">01</span><div><p class="eyebrow">World of Me</p><h2>What is happening inside me?</h2><p>Explore your body, feelings, senses, attention, needs, identity, and inner signals.</p><button class="wonder-chip" type="button" data-wonder="What does your body tell you before your mind has words for it?">Give me a wonder</button></div></article>
+      <article id="mind" class="world-row"><span class="world-number">02</span><div><p class="eyebrow">Mind Lab</p><h2>How does my mind work?</h2><p>Experiment with memory, imagination, logic, focus, assumptions, and how you learn.</p><button class="wonder-chip" type="button" data-wonder="Can your brain be certain about something and still be wrong?">Give me a wonder</button></div></article>
+      <article id="earth" class="world-row"><span class="world-number">03</span><div><p class="eyebrow">Living Earth</p><h2>How is life connected?</h2><p>Follow relationships between plants, animals, water, food, weather, people, and place.</p><button class="wonder-chip" type="button" data-wonder="What would disappear from your neighborhood if one tiny species vanished?">Give me a wonder</button></div></article>
+      <article id="us" class="world-row"><span class="world-number">04</span><div><p class="eyebrow">World of Us</p><h2>How do we live well with other people?</h2><p>Explore empathy, communication, boundaries, consent, cooperation, culture, and repair.</p><button class="wonder-chip" type="button" data-wonder="Can two people disagree and both still be telling the truth about their experience?">Give me a wonder</button></div></article>
+      <article id="creation" class="world-row"><span class="world-number">05</span><div><p class="eyebrow">Creation Station</p><h2>What can I bring into the world?</h2><p>Make art, stories, inventions, prototypes, games, ideas, and things that solve real problems.</p><button class="wonder-chip" type="button" data-wonder="What annoying little problem could you redesign today?">Give me a wonder</button></div></article>
+      <article id="truth" class="world-row"><span class="world-number">06</span><div><p class="eyebrow">Truth Quest</p><h2>How do I decide what to trust?</h2><p>Investigate evidence, sources, persuasion, advertising, misinformation, and incentives.</p><button class="wonder-chip" type="button" data-wonder="Why might someone want you to believe something that is not true?">Give me a wonder</button></div></article>
+      <article id="tech" class="world-row"><span class="world-number">07</span><div><p class="eyebrow">Tech World</p><h2>How do human-made systems work?</h2><p>Explore computers, coding, networks, engineering, privacy, cybersecurity, and digital choices.</p><button class="wonder-chip" type="button" data-wonder="What actually happens after you press a button on the internet?">Give me a wonder</button></div></article>
+      <article id="ai" class="world-row linked-world"><span class="world-number">08</span><div><p class="eyebrow">AI Adventure</p><h2>How do I create with AI without giving away my own thinking?</h2><p>Enter the separate AI Adventure curriculum for machine learning, coding, generative AI, verification, and human agency.</p><a class="button secondary" href="https://iamlegend-imani.github.io/AI-Adventure/">Enter AI Adventure</a></div></article>
+      <article id="unknown" class="world-row"><span class="world-number">09</span><div><p class="eyebrow">The Unknown</p><h2>What do we do with questions that have no easy answer?</h2><p>Wonder about consciousness, space, time, mystery, belief, uncertainty, and what nobody knows yet.</p><button class="wonder-chip" type="button" data-wonder="What is a question you think humans may never fully answer?">Give me a wonder</button></div></article>
+      <article id="matter" class="world-row"><span class="world-number">10</span><div><p class="eyebrow">Make It Matter</p><h2>What will I do with what I know?</h2><p>Turn learning into contribution through service, problem-solving, responsibility, and care.</p><button class="wonder-chip" type="button" data-wonder="What is one small thing around you that could be better because you noticed it?">Give me a wonder</button></div></article>
+    </section>
+  </main>
+
+  <div id="wonderModal" class="wonder-modal" hidden><div class="wonder-dialog" role="dialog" aria-modal="true" aria-labelledby="wonderText"><button id="closeWonder" class="close-btn" type="button" aria-label="Close">×</button><p class="eyebrow">A wonder for you</p><h2 id="wonderText"></h2><p>You do not need the answer right away.</p></div></div>
+
+  <footer><p>Made for Koko &amp; Israel with love and intention.</p><small>WOW — World of Wonder</small></footer>
+  <script src="script.js?v=1"></script>
+</body>
+</html>
