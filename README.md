@@ -6,6 +6,37 @@ A conscious learning world for curious kids exploring self, mind, nature, relati
 
 WOW is designed first for children and the adults learning alongside them. It is not a conventional school portal or a collection of worksheets. Children enter worlds, follow questions, notice what is around and within them, experiment, make things, reflect, and contribute.
 
+## Start here: two layers
+
+WOW now has **two connected learning experiences**:
+
+1. **The 8-Adventure Journey** — the playful entry point. Eight cross-world missions designed to help children feel how WOW works.
+2. **The 24-Week Foundation Curriculum** — the full ages 7–9 program. Six four-week learning arcs with explicit big ideas, experiences, foundation/stretch paths, parent lenses, reflection, creation, and contribution.
+
+The Journey is not the curriculum. It is the doorway into it.
+
+## The 24-week foundation
+
+### Arc 01 · Learning to Notice — Weeks 1–4
+Self-awareness, senses, attention, emotion, perspective, and patterns.
+
+### Arc 02 · Living With Others — Weeks 5–8
+Empathy, boundaries, communication, consent, conflict, cooperation, and repair.
+
+### Arc 03 · Learning From a Living World — Weeks 9–12
+Ecology, systems, interdependence, biomimicry, resources, stewardship, and place.
+
+### Arc 04 · Truth, Attention & Influence — Weeks 13–16
+Evidence, persuasion, advertising, incentives, media literacy, uncertainty, and trust.
+
+### Arc 05 · Humans, Tools & Intelligent Machines — Weeks 17–20
+Engineering, computation, privacy, cybersecurity, algorithms, AI, agency, and human judgment.
+
+### Arc 06 · Imagination, Purpose & Contribution — Weeks 21–24
+Creativity, entrepreneurship, mystery, values, problem-solving, service, and meaningful creation.
+
+Each week is designed for roughly **45–75 minutes** and can expand into multiple sessions if a question catches fire.
+
 ## Core learning rhythm
 
 **NOTICE → WONDER → EXPLORE → QUESTION → CREATE → REFLECT → CONTRIBUTE**
@@ -41,11 +72,14 @@ WOW begins as a learning world made for **Koko & Israel with love and intention*
 ## Repository structure
 
 - `index.html` — child-facing entry to WOW
+- `journey.html` — 8 cross-world starter adventures
+- `curriculum.html` — full 24-week ages 7–9 curriculum
 - `worlds.html` — map of the learning worlds
 - `guide.html` — parent/guide philosophy and learning model
 - `framework.md` — curriculum architecture underneath the experience
-- `styles.css` — visual system
-- `script.js` — theme, animation, and interaction behavior
+- `styles.css` — shared visual system
+- `curriculum.css` — calm presentation for the full curriculum
+- `script.js` — theme, animation, progress, curriculum, and interaction behavior
 
 ## Relationship to AI Adventure
 
