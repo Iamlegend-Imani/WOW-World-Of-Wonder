@@ -2,6 +2,24 @@ const darkBtn = document.getElementById('darkTheme');
 const lightBtn = document.getElementById('lightTheme');
 const animationBtn = document.getElementById('animationToggle');
 
+// Make the full curriculum visible from every WOW page without rewriting each page header.
+const mainNav = document.querySelector('.topbar nav');
+if(mainNav && !mainNav.querySelector('a[href="curriculum.html"]')){
+  const link = document.createElement('a');
+  link.href = 'curriculum.html';
+  link.textContent = 'Curriculum';
+  const worldsLink = mainNav.querySelector('a[href="worlds.html"]');
+  mainNav.insertBefore(link, worldsLink || null);
+}
+
+// Load the curriculum-specific presentation only where it is needed.
+if(document.querySelector('.curriculum-shell, .curriculum-preview')){
+  const extraStyles = document.createElement('link');
+  extraStyles.rel = 'stylesheet';
+  extraStyles.href = 'curriculum.css?v=1';
+  document.head.appendChild(extraStyles);
+}
+
 function setTheme(theme){
   const light = theme === 'light';
   document.body.classList.toggle('light-theme', light);
@@ -68,22 +86,16 @@ if(closeWonder) closeWonder.addEventListener('click', closeModal);
 if(modal) modal.addEventListener('click',e=>{ if(e.target === modal) closeModal(); });
 document.addEventListener('keydown',e=>{ if(e.key === 'Escape' && modal && !modal.hidden) closeModal(); });
 
+// Eight-adventure journey progress.
 const missions = Array.from(document.querySelectorAll('.mission'));
 const progressFill = document.getElementById('progressFill');
 const progressText = document.getElementById('progressText');
 
 function getDiscoveries(){
-  try {
-    return JSON.parse(localStorage.getItem('wowDiscoveries') || '[]');
-  } catch {
-    return [];
-  }
+  try { return JSON.parse(localStorage.getItem('wowDiscoveries') || '[]'); }
+  catch { return []; }
 }
-
-function saveDiscoveries(ids){
-  localStorage.setItem('wowDiscoveries', JSON.stringify(ids));
-}
-
+function saveDiscoveries(ids){ localStorage.setItem('wowDiscoveries', JSON.stringify(ids)); }
 function updateProgress(){
   const discovered = getDiscoveries();
   missions.forEach(mission=>{
@@ -120,5 +132,14 @@ missions.forEach(mission=>{
     });
   }
 });
-
 updateProgress();
+
+// Full 24-week curriculum: one calm expandable lesson at a time.
+document.querySelectorAll('.week').forEach(week=>{
+  const head = week.querySelector('.week-head');
+  if(!head) return;
+  head.addEventListener('click',()=>{
+    const open = week.classList.toggle('open');
+    head.setAttribute('aria-expanded', String(open));
+  });
+});
